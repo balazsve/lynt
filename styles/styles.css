@@ -18,20 +18,89 @@ body {
   box-sizing: inherit;
 }
 /* main page */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.nav__logo {
+  max-width: 120px;
+}
+
+.nav__links {
+  display: flex;
+
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.nav__links__link {
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: black;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.nav__links__link__text {
+  margin: auto;
+  text-transform: uppercase;
+}
+
+.nav__links__link__social {
+  max-width: 1rem;
+}
+
 .porfolio-grid {
   display: grid;
+  margin: 1rem;
+  gap: 1rem;
+}
+
+.portfolio-grid__link {
+  position: relative;
+  text-align: center;
+  color: black;
+}
+
+.portfolio-grid__link__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 500;
+  font-size: 1rem;
 }
 
 .portfolio-grid__link__background-image {
   width: 100%;
 }
 
+/* description */
+
+.description {
+  text-align: center;
+  max-width: 100%;
+  margin: 1rem;
+}
+
+.description > h1 {
+  font-weight: 100;
+  margin-bottom: 2rem;
+}
+
 /* gallery pages */
 
 .gallery-image-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+
   max-width: 100%;
+  margin: 1rem;
+  gap: 1rem;
 }
 
 .gallery-image-grid__image {
@@ -40,15 +109,86 @@ body {
   max-width: 500px;
 }
 
+.about {
+  background-color: antiquewhite;
+  height: 500px;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+/* footer */
+
+.footer {
+  margin: auto;
+  display: flex;
+
+  justify-content: space-between;
+  padding: 1rem 2rem 3rem 2rem;
+}
+
+.footer__logo {
+  max-width: 150px;
+}
+
+.footer__subcontainer {
+  display: flex;
+  width: 150px;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
 /* media */
 
 @media (min-width: 700px) {
+  nav {
+    gap: 1rem;
+    padding: 2rem;
+  }
+
+  .nav__logo {
+    max-width: 200px;
+  }
+
+  .nav__links {
+    gap: 2rem;
+  }
+
+  .nav__links__link__social {
+    max-width: 2rem;
+  }
+
+  .portfolio-grid__link__title {
+    font-size: 2rem;
+  }
+  .nav__links__link {
+    font-size: 1rem;
+  }
+  .gallery-image-grid {
+    grid-template-columns: 1fr 1fr;
+    margin: 2rem;
+    gap: 2rem;
+  }
+
   .porfolio-grid {
     grid-template-columns: 1fr 1fr;
+    margin: 2rem;
+    gap: 2rem;
   }
 
   .gallery-image-grid__image {
     object-fit: contain;
     max-width: 100%;
+  }
+
+  .description {
+    margin: 2rem;
+  }
+
+  .footer {
+    padding: 1rem 4rem 3rem 4rem;
+  }
+
+  .footer__logo {
+    max-width: 300px;
   }
 }
