@@ -1,0 +1,54 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+/* main page */
+.porfolio-grid {
+  display: grid;
+}
+
+.portfolio-grid__link__background-image {
+  width: 100%;
+}
+
+/* gallery pages */
+
+.gallery-image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 100%;
+}
+
+.gallery-image-grid__image {
+  object-fit: contain;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* media */
+
+@media (min-width: 700px) {
+  .porfolio-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-image-grid__image {
+    object-fit: contain;
+    max-width: 100%;
+  }
+}
